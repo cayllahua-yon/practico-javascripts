@@ -75,7 +75,7 @@ function areaCirculo(radio) {
 console.groupEnd();
 
 
-// Aquí interactuamos con el HTML
+// Aquí interactuamos con el HTML para Cuadrado
 function calcularPerimetroCuadrado() {
   const input = document.getElementById("InputCuadrado");
   const value = input.value;
@@ -90,3 +90,38 @@ function calcularAreaCuadrado() {
   const area = areaCuadrado(value);
   alert(area);
 }
+
+// Aquí interactuamos con el HTML para Triangulo
+
+  function calcularPerimetroTriangulo() {
+  const inputLadoA = document.getElementById("InputTrianguloLadoA");
+  const valueA = Number(inputLadoA.value);
+  console.log(typeof valueA)
+
+  const inputLadoB = document.getElementById("InputTrianguloLadoB");
+  const valueB = Number( inputLadoB.value);
+
+  const inputLadoBase = document.getElementById("InputTrianguloLadoBase");
+  const valueBase =  Number( inputLadoBase.value);
+
+    if(valueA == valueB){
+      const perimetroTrianguloA = perimetroTriangulo(valueA, valueB, valueBase);
+      alert(perimetroTrianguloA);
+      console.log(typeof perimetroTrianguloA)
+    }else{
+      alert("el triángulo isósceles require de 2 lados Iguales. intentelo de nuevo ");
+    }
+  // alert(perimetroTriangulo);
+}
+
+function calcularAreaTriangulo() {
+  const inputLadoH = document.getElementById("InputTrianguloLadoH");
+  const valueH = inputLadoH.value;
+
+  const inputLadoBase2 = document.getElementById("InputTrianguloLadoBase2");
+  const valueBase2 = inputLadoBase2.value;
+
+  const area = areaTriangulo(valueH, valueBase2);
+  alert(area);
+}
+
